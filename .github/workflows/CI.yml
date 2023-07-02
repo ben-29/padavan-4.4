@@ -20,7 +20,7 @@ jobs:
       images_dir: /opt/images
     strategy:
       matrix:
-        include
+        include:
           - build_variant: "mt7621-usb-2"
             targets: "R2100"
     steps:
