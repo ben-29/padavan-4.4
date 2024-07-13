@@ -99,7 +99,8 @@ log = {
 				} or nil,
 			} or nil,
 			grpcSettings = (server.transport == "grpc") and (server.grpc_path ~= nil) and {
-				serviceName = server.grpc_path
+				serviceName = server.grpc_path,
+				authority = server.server,
 			} or nil,
 			httpSettings = (server.transport == "h2") and {
 				path = server.h2_path,
